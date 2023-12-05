@@ -7,12 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:core": "ng build core && cd dist/core && npm pack",
-    "build:chart-render": "ng build chart-render && cd dist/chart-render && npm pack",
-    "build:form-render": "ng build form-render && cd dist/form-render && npm pack",
-    "build:generator": "ng build generator && cd dist/generator && npm pack",
-    "build:table-render": "ng build table-render && cd dist/table-render && npm pack",
-    "build:editor": "ng build editor && cd dist/editor && npm pack"
+    "build:core": "ng build core --watch",
+    "build:chart-render": "ng build chart-render --watch",
+    "build:form-render": "ng build form-render --watch",
+    "build:generator": "ng build generator --watch",
+    "build:table-render": "ng build table-render --watch",
+    "build:editor": "ng build editor --watch"
   },
   "private": true,
   "dependencies": {
@@ -25,8 +25,9 @@
     "@angular/platform-browser-dynamic": "^16.2.12",
     "@angular/router": "^16.2.12",
     "codemirror": "^5.65.3",
-    "core": "file:libs/core-0.0.1.tgz",
-    "form-render": "file:libs/form-render-0.0.1.tgz",
+    "core": "workspace:^",
+    "form-render": "workspace:^",
+    "generator": "workspace:^",
     "highlight.js": "^11.5.1",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
@@ -37,6 +38,7 @@
     "monaco-editor": "^0.39.0",
     "ng-zorro-antd": "^16.2.2",
     "rxjs": "~7.5.0",
+    "table-render": "workspace:^",
     "tslib": "^2.3.0",
     "uslug": "^1.0.4",
     "zone.js": "~0.13.3"
