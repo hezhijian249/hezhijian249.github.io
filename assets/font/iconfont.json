@@ -1,0 +1,16 @@
+{
+  "id": "3908882",
+  "name": "editor",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "380329",
+      "name": "copy",
+      "font_class": "copy",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    }
+  ]
+}
