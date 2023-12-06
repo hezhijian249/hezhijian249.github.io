@@ -19,7 +19,6 @@ export class GeneratorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   selectComponentChange(selectComponent: FormField) {
     this.selectComponent = selectComponent;
   }

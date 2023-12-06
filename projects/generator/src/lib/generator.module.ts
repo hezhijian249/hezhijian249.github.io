@@ -14,15 +14,16 @@ import { NzFormModule } from "ng-zorro-antd/form";
 import { CoreModule } from "core";
 import { PropertiesPanelComponent } from './components/properties-panel/properties-panel.component';
 import { FormRenderModule } from "form-render";
-
-
+import { HeaderComponent } from './components/header/header.component';
+import { NzButtonModule } from "ng-zorro-antd/button";
 
 @NgModule({
   declarations: [
     GeneratorComponent,
     ComponentLibraryComponent,
     DesignerComponent,
-    PropertiesPanelComponent
+    PropertiesPanelComponent,
+    HeaderComponent
   ],
   imports: [
     DragDropModule,
@@ -35,7 +36,8 @@ import { FormRenderModule } from "form-render";
     NzCardModule,
     NzFormModule,
     CoreModule,
-    FormRenderModule
+    FormRenderModule,
+    NzButtonModule
   ],
   exports: [
     GeneratorComponent
