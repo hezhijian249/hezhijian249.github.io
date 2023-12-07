@@ -2,9 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from "@angular/cdk/drag-drop";
 import { UntypedFormBuilder, UntypedFormGroup } from "@angular/forms";
 import { ComponentLibrary } from "../../entity/componentLibrary";
-import * as lodash from 'lodash'
-import { FormField } from "form-render/lib/entity/FormField";
-import { createGroup } from "form-render";
+import { createGroup, FormField } from "form-render";
+import { cloneDeep } from "lodash";
 
 @Component({
   selector: 'h-designer',
@@ -36,7 +35,7 @@ export class DesignerComponent implements OnInit {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
-      const cloneData: FormField[] = lodash.cloneDeep(event.previousContainer.data).map((item: ComponentLibrary) => item.schema);
+      const cloneData: FormField[] = cloneDeep(event.previousContainer.data).map((item: ComponentLibrary) => item.schema);
       cloneData[event.previousIndex].id = new Date().getTime();
       cloneData[event.previousIndex].key = 'field' + new Date().getMilliseconds();
       transferArrayItem(

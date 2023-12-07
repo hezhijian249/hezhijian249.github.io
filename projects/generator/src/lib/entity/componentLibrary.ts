@@ -1,3 +1,5 @@
+import { FormField } from "form-render";
+
 export interface ComponentLibrary {
   /**
    * 组件的id
@@ -16,5 +18,5 @@ export interface ComponentLibrary {
   /**
    * 渲染组件的schema
    */
-  schema: any;
+  schema: FormField;
 }

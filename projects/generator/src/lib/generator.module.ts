@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { GeneratorComponent } from './generator.component';
 import { DragDropModule } from '@angular/cdk/drag-drop'
-import { CommonModule } from "@angular/common";
+import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { ComponentLibraryComponent } from './components/component-library/component-library.component';
 import { NzInputModule } from "ng-zorro-antd/input";
 import { NzIconModule } from "ng-zorro-antd/icon";
@@ -16,6 +16,8 @@ import { PropertiesPanelComponent } from './components/properties-panel/properti
 import { FormRenderModule } from "form-render";
 import { HeaderComponent } from './components/header/header.component';
 import { NzButtonModule } from "ng-zorro-antd/button";
+import { OperatorToolComponent } from './components/operator-tool/operator-tool.component';
+import { NzToolTipModule } from "ng-zorro-antd/tooltip";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { NzButtonModule } from "ng-zorro-antd/button";
     ComponentLibraryComponent,
     DesignerComponent,
     PropertiesPanelComponent,
-    HeaderComponent
+    HeaderComponent,
+    OperatorToolComponent
   ],
   imports: [
     DragDropModule,
@@ -37,7 +40,9 @@ import { NzButtonModule } from "ng-zorro-antd/button";
     NzFormModule,
     CoreModule,
     FormRenderModule,
-    NzButtonModule
+    NzButtonModule,
+    NgOptimizedImage,
+    NzToolTipModule
   ],
   exports: [
     GeneratorComponent
