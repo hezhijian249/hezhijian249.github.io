@@ -10,12 +10,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormRenderModule } from "../../projects/form-render/src/lib/form-render.module";
-import { TableRenderModule } from "../../projects/table-render/src/lib/table-render.module";
 import { CodemirrorExampleComponent } from './codemirror-example/codemirror-example.component';
 import { EditorModule } from "../../projects/editor/src/lib/editor.module";
-import { GeneratorModule } from "../../projects/generator/src/lib/generator.module";
-import { GeneratorComponent } from './generator/generator.component';
 import { MonacoComponent } from './monaco/monaco.component';
+import { TableRenderModule } from "table-render";
+import { GeneralComponent } from './general/general.component';
+import { GeneratorModule } from "generator";
 
 registerLocaleData(zh);
 
@@ -23,8 +23,8 @@ registerLocaleData(zh);
   declarations: [
     AppComponent,
     CodemirrorExampleComponent,
-    GeneratorComponent,
-    MonacoComponent
+    MonacoComponent,
+    GeneralComponent
   ],
   imports: [
     BrowserModule,
